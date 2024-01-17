@@ -13,17 +13,40 @@
         <version>3.2.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>krzysiek1421.springframework</groupId>
     <artifactId>petclinic</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>petclinic</name>
     <description>petclinic</description>
+
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>19</java.version>
     </properties>
-    <dependencies>
 
-    </dependencies>
+    <scm>
+        <developerConnection>scm:git:https://github.com/krzysiek1421/pet-clinic.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <goals>install</goals>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
